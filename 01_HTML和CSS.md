@@ -258,7 +258,7 @@ img 标签可以在 html 页面上显示图片。
 
 ### 7.6、了解 iframe 框架标签 (内嵌窗口)
 ifarme 标签它可以在一个 html 页面上,打开一个小窗口,去加载一个单独的页面. 
-```java
+```html
 <body>
 	我是一个单独的完整的页面<br/><br/>
 	<!--ifarme 标签可以在页面上开辟一个小区域显示一个单独的页面
@@ -273,5 +273,58 @@ ifarme 标签它可以在一个 html 页面上,打开一个小窗口,去加载�
 			<li><a href="1.font 标签.html" target="abc">1.font 标签.html</a></li>
 			<li><a href="2.特殊字符.html" target="abc">2.特殊字符.html</a></li>
 		</ul>
+</body>
+```
+
+### 8.10、表单标签 （ ***** 重点 ，必须掌握 * ）
+
+什么是表单?
+表单就是 html 页面中,用来收集用户信息的所有元素集合.然后把这些信息发送给服务器.
+![image](https://user-images.githubusercontent.com/69302396/135948163-ca9432ee-38e5-4356-98a8-f077d6036026.png)
+
+**需求 1:创建一个个人信息注册的表单界面。包含用户名，密码，确认密码。性别（单选），兴趣爱好（多选），国籍（下拉列表）。
+隐藏域，自我评价（多行文本域）。重置，提交。**
+
+**表单的显示:**
+
+```html
+<body>
+	<!--需求 1:创建一个个人信息注册的表单界面。包含用户名，密码，确认密码。性别（单选），兴趣爱好（多选），国籍（下拉列表）。
+	隐藏域，自我评价（多行文本域）。重置，提交。-->
+	<!--
+	form 标签就是表单
+	input type=text 是文件输入框 value 设置默认显示内容
+	input type=password 是密码输入框 value 设置默认显示内容
+	input type=radio 是单选框 name 属性可以对其进行分组 checked="checked"表示默认选中
+	input type=checkbox 是复选框 checked="checked"表示默认选中
+	input type=reset 是重置按钮 value 属性修改按钮上的文本
+	input type=submit 是提交按钮 value 属性修改按钮上的文本
+	input type=button 是按钮 value 属性修改按钮上的文本
+	input type=file 是文件上传域
+	input type=hidden 是隐藏域 当我们要发送某些信息，而这些信息，不需要用户参与，就可以使用隐藏域（提交的
+	时候同时发送给服务器）
+	select 标签是下拉列表框
+	option 标签是下拉列表框中的选项 selected="selected"设置默认选中
+	textarea 表示多行文本输入框 （起始标签和结束标签中的内容是默认值）
+	rows 属性设置可以显示几行的高度
+	cols 属性设置每行可以显示几个字符宽度
+	-->
+	<form>
+		用户名称：<input type="text" value="默认值"/><br/>
+		用户密码：<input type="password" value="abc"/><br/>
+		确认密码：<input type="password" value="abc"/><br/>
+		性别：<input type="radio" name="sex"/>男<input type="radio" name="sex" checked="checked" />女<br/>
+		兴趣爱好：<input type="checkbox" checked="checked" />Java<input type="checkbox" />JavaScript<input
+		type="checkbox" />C++<br/>
+		国籍：<select>
+		<option>--请选择国籍--</option>
+		<option selected="selected">中国</option>
+		<option>美国</option>
+		<option>小日本</option>
+		</select><br/>
+		自我评价：<textarea rows="10" cols="20">我才是默认值</textarea><br/>
+		<input type="reset" value="abc" />
+		<input type="submit"/>
+	</form>
 </body>
 ```
