@@ -499,4 +499,32 @@ font-size:30px;
 ```	
 注：一般每行只描述一个属性
 
-CSS 注释：/*注释内容*/
+CSS 注释：/* 注释内容 */
+### 8.3、CSS 和 HTML 的结合方式
+#### 8.3.1、第一种：
+在标签的 style 属性上设置”key:value value;”，修改标签样式。
+
+需求 1：分别定义两个 div、span 标签，分别修改每个 div 标签的样式为：边框 1 个像素，实线，红色。
+```css
+<div>div 标签 1</div>
+<div>div 标签 2</div>
+<span>span 标签 1</span>
+
+```css
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+	<!--需求 1：分别定义两个 div、span 标签，分别修改每个 div 标签的样式为：边框 1 个像素，实线，红色。-->
+	<div style="border: 1px solid red;">div 标签 1</div>
+	<div style="border: 1px solid red;">div 标签 2</div>
+	<span style="border: 1px solid red;">span 标签 1</span>
+	<span style="border: 1px solid red;">span 标签 2</span>
+</body>
+</html>
+```
+```
+<span>span 标签 2</span>
