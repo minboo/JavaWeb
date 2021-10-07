@@ -662,33 +662,53 @@ class 类型选择器，可以通过 class 属性有效的选择性地去使用�
 组合选择器可以让多个选择器共用同一个 css 样式代码
 
 #### 8.5、常用样式：
+
 1、字体颜色
+
 	color：red；
 	颜色可以写颜色名如：black, blue, red, green 等
 	颜色也可以写 rgb 值和十六进制表示值：如 rgb(255,0,0)，#00F6DE，如果写十六进制值必须加#
+	
 2、宽度
+
 	width:19px;
 	宽度可以写像素值：19px；
 	也可以写百分比值：20%；
+	
 3、高度
+
 	height:20px;
 	高度可以写像素值：19px；
 	也可以写百分比值：20%；
+	
 4、背景颜色
+
 	background-color:#0F2D4C
+	
 4、字体样式：
+
 	color：#FF0000；字体颜色红色
 	font-size：20px; 字体大小
+	
 5、红色 1 像素实线边框
+
 	border：1px solid red;
+	
 7、DIV 居中
+
 	margin-left: auto;
 	margin-right: auto;
+	
 8、文本居中：
+
 	text-align: center;
+	
 9、超连接去下划线
+
 	text-decoration: none;
+	
 10、表格细线
+
 	table {
 	border: 1px solid black; /*设置边框*/
 	border-collapse: collapse; /*将边框合并*/
@@ -696,7 +716,9 @@ class 类型选择器，可以通过 class 属性有效的选择性地去使用�
 	td,th {
 	border: 1px solid black; /*设置边框*/
 	}
+	
 11、列表去除修饰
+
 	ul {
 	list-style: none;
 	}
