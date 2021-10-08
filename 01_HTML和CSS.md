@@ -722,3 +722,56 @@ class 类型选择器，可以通过 class 属性有效的选择性地去使用�
 	ul {
 	list-style: none;
 	}
+**示例代码：**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06-css 常用样式.html</title>
+<style type="text/css">
+div{
+color: red;
+border: 1px yellow solid;
+width: 300px;
+height: 300px;
+background-color: green;
+font-size: 30px;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+table{
+border: 1px red solid;
+border-collapse: collapse;
+}
+td{
+border: 1px red solid;
+}
+a{
+text-decoration: none;
+}
+ul{
+list-style: none;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li>11111111111</li>
+		<li>11111111111</li>
+		<li>11111111111</li>
+		<li>11111111111</li>
+		<li>11111111111</li>
+	</ul>
+	<table>
+		<tr>
+			<td>1.1</td>
+			<td>1.2</td>
+		</tr>
+	</table>
+	<a href="http://www.baidu.com">百度</a>
+	<div>我是 div 标签</div>
+</body>
+</html
+```
