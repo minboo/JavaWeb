@@ -59,9 +59,9 @@ html 代码内容：
 </body>
 </html>
 ```
-# 7、数组（*****重点）
+# 3、数组（*****重点）
 
-## 7.1、数组定义方式
+## 3.1、数组定义方式
 
 JS 中 数组的定义：
 
@@ -95,3 +95,103 @@ JS 中 数组的定义：
 </body>
 ```
 </html>
+
+# 4、函数(*****重点)
+
+## 4.1、函数的二种定义方式
+
+第一种，可以使用 function 关键字来定义函数。
+
+    使用的格式如下:
+    function 函数名(形参列表){
+    函数体
+    }
+    
+在 JavaScript 语言中，如何定义带有返回值的函数？
+
+只需要在函数体内直接使用 return 语句返回值即可！
+
+示例代码：
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+    <script type="text/javascript">
+    // 定义一个无参函数
+    function fun(){
+        alert("无参函数 fun()被调用了");
+    }
+    // 函数调用===才会执行
+    // fun();
+    function fun2(a ,b) {
+        alert("有参函数 fun2()被调用了 a=>" + a + ",b=>"+b);
+    }
+    // fun2(12,"abc");
+    // 定义带有返回值的函数
+    function sum(num1,num2) {
+        var result = num1 + num2;
+        return result;
+    }
+    alert( sum(100,50) );
+</script>
+</head>
+<body>
+</body>
+</html>
+```
+
+函数的第二种定义方式，格式如下：
+
+使用格式如下：
+
+    var 函数名 = function(形参列表) { 函数体 }
+
+示例代码：
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+  <script type="text/javascript">
+      var fun = function () {
+          alert("无参函数");
+      }
+      // fun();
+      var fun2 = function (a,b) {
+          alert("有参函数 a=" + a + ",b=" + b);
+      }
+      // fun2(1,2);
+      var fun3 = function (num1,num2) {
+          return num1 + num2;
+      }
+      alert( fun3(100,200) );
+  </script>
+</head>
+<body>
+</body>
+</html>
+```
+注：在 Java 中函数允许重载。但是在 JS 中函数的重载会直接覆盖掉上一次的定义
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+  <script type="text/javascript">
+      function fun() {
+          alert("无参函数 fun()");
+      }
+      function fun(a,b) {
+          alert("有参函数 fun(a,b)");
+      }
+      fun();
+  </script>
+</head>
+<body>
+</body>
+</html>
+```
