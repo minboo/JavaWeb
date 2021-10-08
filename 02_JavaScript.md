@@ -59,3 +59,39 @@ html 代码内容：
 </body>
 </html>
 ```
+# 7、数组（*****重点）
+
+## 7.1、数组定义方式
+
+JS 中 数组的定义：
+
+    格式：
+    var 数组名 = []; // 空数组
+    var 数组名 = [1 , ’abc’ , true]; // 定义数组同时赋值元素
+示例代码：
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+  <script type="text/javascript">
+    var arr = [true,1]; // 定义一个空数组
+    // alert( arr.length ); // 0
+    arr[0] = 12;
+    // alert( arr[0] );//12
+    // alert( arr.length ); // 0
+    // javaScript 语言中的数组，只要我们通过数组下标赋值，那么最大的下标值，就会自动的给数组做扩容操作。
+    arr[2] = "abc";
+    alert(arr.length); //3
+    // alert(arr[1]);// undefined
+    // 数组的遍历
+    for (var i = 0; i < arr.length; i++){
+    alert(arr[i]);
+    }
+  </script>
+</head>
+<body>
+</body>
+```
+</html>
