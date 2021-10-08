@@ -360,7 +360,8 @@ Object 形式的自定义对象
 
 2、标签对象.事件名 = fucntion(){}
 
-onload 加载完成事件
+**onload 加载完成事件**
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -384,7 +385,7 @@ onload 加载完成事件
 <body>
 </body>
 </html>
-
+```
 **onclick 单击事件**
 ```javascript
 <!DOCTYPE html>
