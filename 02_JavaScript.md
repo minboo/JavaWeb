@@ -247,73 +247,86 @@ public void fun( Object ... args );
 
 ## 5、JS 中的自定义对象（扩展内容）
 Object 形式的自定义对象
+
 对象的定义：
-var 变量名 = new Object(); // 对象实例（空对象）
-变量名.属性名 = 值; // 定义一个属性
-变量名.函数名 = function(){} // 定义一个函数
-对象的访问：
-变量名.属性 / 函数名();
+
+    var 变量名 = new Object(); // 对象实例（空对象）
+        变量名.属性名 = 值; // 定义一个属性
+        变量名.函数名 = function(){} // 定义一个函数
+    对象的访问：
+        变量名.属性 / 函数名();
+        
 示例代码：
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Title</title>
-<script type="text/javascript">
-// 对象的定义：
-// var 变量名 = new Object(); // 对象实例（空对象）
-// 变量名.属性名 = 值; // 定义一个属性
-// 变量名.函数名 = function(){} // 定义一个函数
-var obj = new Object();
-obj.name = "华仔";
-obj.age = 18;
-obj.fun = function () {
-alert("姓名：" + this.name + " , 年龄：" + this.age);
-}
-// 对象的访问：
-// 变量名.属性 / 函数名();
-// alert( obj.age );
-obj.fun();
-</script>
+    <script type="text/javascript">
+        // 对象的定义：
+        // var 变量名 = new Object(); // 对象实例（空对象）
+        // 变量名.属性名 = 值; // 定义一个属性
+        // 变量名.函数名 = function(){} // 定义一个函数
+        var obj = new Object();
+        obj.name = "华仔";
+        obj.age = 18;
+        obj.fun = function () {
+        alert("姓名：" + this.name + " , 年龄：" + this.age);
+        }
+        // 对象的访问：
+        // 变量名.属性 / 函数名();
+        // alert( obj.age );
+        obj.fun();
+    </script>
 </head>
 <body>
 </body>
 </html>
+```
+
 {}花括号形式的自定义对象
+
 对象的定义：
-var 变量名 = { // 空对象
-属性名：值, // 定义一个属性
-属性名：值, // 定义一个属性
-函数名：function(){} // 定义一个函数
-};
+
+    var 变量名 = { // 空对象
+    属性名：值, // 定义一个属性
+    属性名：值, // 定义一个属性
+    函数名：function(){} // 定义一个函数
+    };
+    
 对象的访问：
-变量名.属性 / 函数名();
+
+    变量名.属性 / 函数名();
+    
 示例代码：
+```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Title</title>
-<script type="text/javascript">
-// 对象的定义：
-// var 变量名 = { // 空对象
-// 属性名：值, // 定义一个属性
-// 属性名：值, // 定义一个属性
-// 函数名：function(){} // 定义一个函数
-// };
-var obj = {
-name:"国哥",
-age:18,
-fun : function () {
-alert("姓名：" + this.name + " , 年龄：" + this.age);
-}
-};
-// 对象的访问：
-// 变量名.属性 / 函数名();
-alert(obj.name);
-obj.fun();
-</script>
+    <script type="text/javascript">
+        // 对象的定义：
+        // var 变量名 = { // 空对象
+        // 属性名：值, // 定义一个属性
+        // 属性名：值, // 定义一个属性
+        // 函数名：function(){} // 定义一个函数
+        // };
+        var obj = {
+        name:"国哥",
+        age:18,
+        fun : function () {
+        alert("姓名：" + this.name + " , 年龄：" + this.age);
+        }
+        };
+        // 对象的访问：
+        // 变量名.属性 / 函数名();
+        alert(obj.name);
+        obj.fun();
+    </script>
 </head>
 <body>
 </body>
 </html>
+```
