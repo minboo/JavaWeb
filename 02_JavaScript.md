@@ -350,12 +350,37 @@ Object 形式的自定义对象
 
 其实就是告诉浏览器，当事件响应后要执行哪些操作代码，叫事件注册或事件绑定。
 
-静态注册事件：通过 html 标签的事件属性直接赋于事件响应后的代码，这种方式我们叫静态注册。 
+* 静态注册事件：通过 html 标签的事件属性直接赋于事件响应后的代码，这种方式我们叫静态注册。 
 
-动态注册事件：是指先通过 js 代码得到标签的 dom 对象，然后再通过 dom 对象.事件名 = function(){} 这种形式赋于事件响应后的代码，叫动态注册。
+* 动态注册事件：是指先通过 js 代码得到标签的 dom 对象，然后再通过 dom 对象.事件名 = function(){} 这种形式赋于事件响应后的代码，叫动态注册。
 
-动态注册基本步骤：
+**动态注册基本步骤：**
 
 1、获取标签对象
 
 2、标签对象.事件名 = fucntion(){}
+
+onload 加载完成事件
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+  <script type="text/javascript">
+      // onload 事件的方法
+      function onloadFun() {
+          alert('静态注册 onload 事件，所有代码');
+          }
+          // onload 事件动态注册。是固定写法
+          window.onload = function () {
+          alert("动态注册的 onload 事件");
+      }
+  </script>
+  </head>
+  <!--静态注册 onload 事件
+  onload 事件是浏览器解析完页面之后就会自动触发的事件
+  <body onload="onloadFun();">
+  -->
+<body>
+</body>
+</html>
