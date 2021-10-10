@@ -534,9 +534,9 @@ onsubmit 表单提交事件
     </form>
 </body>
 </html>
+```
 
-
-## 、DOM 模型
+# 7 、DOM 模型
 
 DOM 全称是 Document Object Model 文档对象模型
 
