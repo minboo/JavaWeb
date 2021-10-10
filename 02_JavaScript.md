@@ -534,3 +534,21 @@ onsubmit 表单提交事件
     </form>
 </body>
 </html>
+
+
+## 、DOM 模型
+
+DOM 全称是 Document Object Model 文档对象模型
+
+大白话，就是把文档中的标签，属性，文本，转换成为对象来管理。
+
+那么 它们是如何实现把标签，属性，文本转换成为对象来管理呢。这就是我们马上要学习的重点。
+
+![image](https://user-images.githubusercontent.com/69302396/136700426-faf1b1d7-7b89-4ea0-8acc-1dd044f33b59.png)
+
+**Document 对象的理解：**
+
+* 第一点：Document 它管理了所有的 HTML 文档内容。
+* 第二点：document 它是一种树结构的文档。有层级关系。
+* 第三点：它让我们把所有的标签 都 对象化
+* 第四点：我们可以通过 document 访问所有的标签对象。
