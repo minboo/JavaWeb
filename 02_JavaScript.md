@@ -425,4 +425,76 @@ Object 形式的自定义对象
 </body>
 </html>
 ```
-
+**onblur 失去焦点事件**
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+    <script type="text/javascript">
+        // 静态注册失去焦点事件
+        function onblurFun() {
+            // console 是控制台对象，是由 JavaScript 语言提供，专门用来向浏览器的控制器打印输出， 用于测试使用
+            // log() 是打印的方法
+            console.log("静态注册失去焦点事件");
+        }
+        // 动态注册 onblur 事件
+        window.onload = function () {
+            //1 获取标签对象
+            var passwordObj = document.getElementById("password");
+            // alert(passwordObj);
+        //2 通过标签对象.事件名 = function(){};
+        passwordObj.onblur = function () {
+            console.log("动态注册失去焦点事件");
+        }
+    }
+    </script>
+</head>
+<body>
+    用户名:<input type="text" onblur="onblurFun();"><br/>
+    密码:<input id="password" type="text" ><br/>
+</body>
+</html>
+```
+```javascript
+onchange 内容发生改变事件
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+    <script type="text/javascript">
+    function onchangeFun() {
+        alert("女神已经改变了");
+    }
+    window.onload = function () {
+         //1 获取标签对象
+        var selObj = document.getElementById("sel01");
+        // alert( selObj );
+        //2 通过标签对象.事件名 = function(){}
+        selObj.onchange = function () {
+        alert("男神已经改变了");
+        }
+    }
+    </script>
+    </head>
+    <body>
+    请选择你心中的女神：
+    <!--静态注册 onchange 事件-->
+    <select onchange="onchangeFun();">
+        <option>--女神--</option>
+        <option>芳芳</option>
+        <option>佳佳</option>
+        <option>娘娘</option>
+    </select>
+    请选择你心中的男神：
+    <select id="sel01">
+        <option>--男神--</option>
+        <option>国哥</option>
+        <option>华仔</option>
+        <option>富城</option>
+    </select>
+</body>
+</html>
+```
