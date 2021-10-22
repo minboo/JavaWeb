@@ -553,3 +553,31 @@ DOM 全称是 Document Object Model 文档对象模型
 * 第三点：它让我们把所有的标签 都 对象化
 * 第四点：我们可以通过 document 访问所有的标签对象。
 
+
+## 8、Document 对象中的方法介绍（*****重点）
+
+`document.getElementById(elementId)`
+
+通过标签的 id 属性查找标签 dom 对象，elementId 是标签的 id 属性值
+
+`document.getElementsByName(elementName)`
+
+通过标签的 name 属性查找标签 dom 对象，elementName 标签的 name 属性值
+
+`document.getElementsByTagName(tagname)`
+
+通过标签名查找标签 dom 对象。tagname 是标签名
+
+`document.createElement( tagName)`
+
+方法，通过给定的标签名，创建一个标签对象。tagName 是要创建的标签名
+
+注：
+
+document 对象的三个查询方法，如果有 id 属性，优先使用 getElementById 方法来进行查询
+如果没有 id 属性，则优先使用 getElementsByName 方法来进行查询
+
+如果 id 属性和 name 属性都没有最后再按标签名查 getElementsByTagName
+
+以上三个方法，一定要在页面加载完成之后执行，才能查询到标签对象。
+
